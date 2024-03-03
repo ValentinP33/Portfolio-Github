@@ -1,0 +1,326 @@
+/* /////////////////////////  Polices  ///////////////////////////// */
+
+@font-face{
+    font-family: SuezOne;
+    src: url('../Fonts/SuezOne-Regular.ttf');
+}
+
+@font-face{
+    font-family: FugazOne;
+    src: url('../Fonts/FugazOne-Regular.ttf');
+}
+
+@font-face{
+    font-family: Fredoka;
+    src: url('../Fonts/Fredoka.ttf');
+}
+
+@font-face{
+    font-family: Nunito;
+    src: url('../Fonts/Nunito/Nunito-Regular.ttf');
+}
+
+/*//////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////  RESPONSIVE POUR PC ///////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+
+@media (min-width:1550px) and (max-width: 1920px){
+/*/////////////////////////  corp  ///////////////////////////////// */
+/*mise en page*/
+body{
+    background-color: #080808;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 1rem;
+}
+
+/* Grille de la page */
+.page{
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    grid-template-rows: 4em auto; /* 4em taille de la priemere ligne */
+}
+
+/*Flex pour centrer le head page*/
+.page>div{
+    display: flex;
+    align-items: center;
+    border-radius: 0.8em;
+}
+
+/* container titre */
+.page>div:nth-child(1){             
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 1;
+    background: linear-gradient(to left, rgba(177, 201, 209, 1), rgba(42, 113, 145, 1));
+    font-family: SuezOne; 
+    font-size:2em;
+    justify-content: center;
+}
+
+/*/////////////////////////// ecranMenu /////////////////////////// */  
+
+/*Position Ecran Menu + Mise en page */
+.page>div:nth-child(2){               
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 25%);
+    min-width: 700px;
+    
+}
+    /* Taille Logo */
+    .bouton{
+        width: 60%;
+    }
+
+    /*police des boutons*/
+    .ecranMenu>div{
+        font-family: SuezOne;
+    }
+
+    .ecranMenu>div>p{
+        font-size: 1.3em;
+        max-height: 28px;
+    }
+
+    /* position Fond ecran princ */
+    .ecranMenu>div:nth-child(1){ 
+        grid-row: 1 /  5;
+        grid-column: 1 / 4;
+    }
+
+    /* boutonprofil */
+    .boutonProfil{ 
+        grid-row: 1;
+        grid-column:1;
+    }
+
+    /*bouton Diplomes/certificats */
+    .boutonDiplomes{
+        opacity: 30%;
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    /* bouton Parcours PRO */
+    .boutonParcoursPro{
+        opacity: 30%;
+        grid-row: 1;
+        grid-column: 3;
+    }
+
+    /*bouton Competences */
+    .boutonCompetences{
+        opacity: 30%;
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    /* bouton Qualités */
+    .boutonQualités{ 
+        opacity: 30%;
+        grid-row: 2;
+        grid-column: 2;
+    }
+
+    /*bouton Loisirs */
+    .boutonLoisirs{
+        opacity: 30%;
+        grid-row: 2;
+        grid-column: 3;
+    }
+
+    /* bouton Contact */
+    .boutonContact{ 
+        grid-row: 3 ;
+        grid-column: 1;
+    }
+
+    /*bouton Projet*/
+    .boutonMesProjets{
+        grid-row: 3;
+        grid-column: 2;
+    }
+
+    /* bouton CV */
+    .boutonMonCV{ 
+        grid-row: 3;
+        grid-column: 3;
+    }
+
+    /*bouton Home*/
+    .boutonHome{
+        grid-row: 4;
+        grid-column: 2;
+    }
+
+    /* Fond ecran princ */
+    .fondEcran img{  
+        height: 100%;
+        width: 100%;
+        min-width: 700px;
+        border-radius: 2em;
+    }
+
+/*////////////////////////////// ecranSecond///////////////////////////// */    
+
+.page>div:nth-child(3){         
+    grid-column: 3 / span 2;
+    grid-row: 2 / span 1;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-rows: 0.2fr 1fr 0.2fr 0.2fr;
+    text-align: center;
+}
+
+.ecranSecond>div:nth-child(1){
+    grid-column: 1/4;
+    grid-row: 1/5;
+}
+
+.marquePageTelephone{
+    grid-row: 1;
+    grid-column: 1/4;
+    font-family: SuezOne;
+    text-align: center;
+    font-size: 3em ;
+    text-shadow:-1px -1px 0 #ffffff,  
+    1px -1px 0 #ffffff,
+   -1px  1px 0 #ffffff,
+    1px  1px 0 #ffffff;
+    margin-top: 1em;
+}
+
+.imgCV{
+    grid-row: 2;
+    grid-column: 1/4;
+}
+
+.imgCV>img{
+    max-width: 70%;
+}
+
+.telechargerCV{
+    grid-row: 3;
+    grid-column: 1/4;
+    margin-bottom: 3em;
+}
+
+.telechargerCV>a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.telechargerCV>a>p{
+    grid-row: 3;
+    font-family: Fredoka;
+    font-size: 1.5em;
+}
+
+.telechargementCV{
+    max-width: 8%;
+}
+
+.boutonHome2{
+    grid-column: 2;
+    grid-row: 4;
+    padding-bottom: 6em;
+}
+
+
+
+}
+
+/*//////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////// RESPONSIVE POUR TELEPHONE ////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+
+@media(max-width: 767px){
+    /*/////////////////////////  corp  ///////////////////////////////// */
+    /*mise en page*/
+    body{
+        max-height: 100vh;
+        background-color: #080808;
+        background-image: url(../Objets/Fond\ Ecran\ secondaireFond\ Ecran\ portfolio.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    /*recuperation ecran second pour telephone*/
+    .ecranSecond{
+        display: grid;
+        grid-template-rows: 0.1fr 1fr 0.1fr 0.1fr;
+        text-align: center;
+        margin: 1em;
+    }
+
+    /*titre sur telephone*/
+    .marquePageTelephone{
+        grid-row: 1;
+        font-family: SuezOne;
+        font-size: 2.5em ;
+        text-shadow:-1px -1px 0 #ffffff,  
+        1px -1px 0 #ffffff,
+       -1px  1px 0 #ffffff,
+        1px  1px 0 #ffffff;
+    }
+
+    .imgCV>img{
+        max-width: 75%;
+    }
+
+    .telechargerCV>a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .telechargerCV>a>img{
+        grid-row: 3;
+        max-width: 10%;
+    }
+
+    .telechargerCV>a>p{
+        grid-row: 3;
+        font-family: Fredoka;
+    }
+
+    /*position icone home*/
+    .boutonHome2{
+        grid-row: 4;
+        text-align: center;
+        margin-top: 1em;
+    }
+
+    /*modification taille icone home*/
+    .boutonMenu{
+        scale: 60%;
+    }  
+
+    /*supression de plusieur balise*/
+    .fondEcran{
+        display: none !important;
+    }
+    .titre{
+        display: none !important;
+    }
+    .marquePage{
+        display: none !important;
+    }
+    .ecranMenu{
+        display: none !important;
+    }
+}

@@ -1,0 +1,362 @@
+/* /////////////////////////  Polices  ///////////////////////////// */
+
+@font-face{
+    font-family: SuezOne;
+    src: url('../Fonts/SuezOne-Regular.ttf');
+}
+
+@font-face{
+    font-family: FugazOne;
+    src: url('../Fonts/FugazOne-Regular.ttf');
+}
+
+
+/*//////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////  RESPONSIVE POUR PC ///////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+
+@media (min-width:1550px) and (max-width: 1920px){
+/*/////////////////////////  corp  ///////////////////////////////// */
+/*mise en page*/
+body{
+    background-color: #080808;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 1rem;
+}
+
+/* Grille de la page */
+.page{
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    grid-template-rows: 4em auto; /* 4em taille de la priemere ligne */
+}
+
+/*Flex pour centrer le head page*/
+.page>div{
+    display: flex;
+    align-items: center;
+    border-radius: 0.8em;
+}
+
+/* container titre */
+.page>div:nth-child(1){             
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+    background: linear-gradient(to left, rgba(177, 201, 209, 1), rgba(42, 113, 145, 1));
+    margin-right: 1rem;
+    font-family: SuezOne; 
+    font-size:2em;
+    justify-content: center;
+}
+
+/* Container marquePage */     
+.page>div:nth-child(2){                         
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 1;
+    background: linear-gradient(to left, rgba(249, 145, 142, 1), rgb(194, 206, 202));
+    font-family: FugazOne;
+    font-size: 2em;
+    justify-content: center;
+}
+
+/*/////////////////////////// ecranMenu /////////////////////////// */  
+
+/*Position Ecran Menu + Mise en page */
+.page>div:nth-child(3){               
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 25%);
+    min-width: 700px;
+    
+}
+    /* Taille Logo */
+    .bouton{
+        width: 60%;
+    }
+
+    /*police des boutons*/
+    .ecranMenu>div{
+        font-family: SuezOne;
+    }
+
+    .ecranMenu>div>p{
+        font-size: 1.3em;
+        max-height: 28px;
+    }
+
+    /* position Fond ecran princ */
+    .ecranMenu>div:nth-child(1){ 
+        
+        grid-row: 1 /  5;
+        grid-column: 1 / 4;
+    }
+
+    /* boutonprofil */
+    .boutonProfil{ 
+        grid-row: 1;
+        grid-column:1;
+    }
+
+    /*bouton Diplomes/certificats */
+    .boutonDiplomes{
+        opacity: 30%;
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    /* bouton Parcours PRO */
+    .boutonParcoursPro{
+        opacity: 30%;
+        grid-row: 1;
+        grid-column: 3;
+    }
+
+    /*bouton Competences */
+    .boutonCompetences{
+        opacity: 30%;
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    /* bouton Qualités */
+    .boutonQualités{ 
+        opacity: 30%;
+        grid-row: 2;
+        grid-column: 2;
+    }
+
+    /*bouton Loisirs */
+    .boutonLoisirs{
+        opacity: 30%;
+        grid-row: 2;
+        grid-column: 3;
+    }
+
+    /* bouton Contact */
+    .boutonContact{ 
+        grid-row: 3 ;
+        grid-column: 1;
+    }
+
+    /*bouton Projet*/
+    .boutonMesProjets{
+        grid-row: 3;
+        grid-column: 2;
+    }
+
+    /* bouton CV */
+    .boutonMonCV{ 
+        grid-row: 3;
+        grid-column: 3;
+    }
+
+    /*bouton Home*/
+    .boutonHome{
+        grid-row: 4;
+        grid-column: 2;
+    }
+
+    /* Fond ecran princ */
+    .fondEcran img{  
+        height: 100%;
+        max-width: 100%;
+        min-width: 700px;
+        border-radius: 2em;
+    }
+
+/*////////////////////////////// ecranSecond///////////////////////////// */    
+
+.page>div:nth-child(4){         
+    grid-column: 3 / span 2;
+    grid-row: 2 / span 1;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr; 
+    min-width: 700px;  
+}
+
+
+
+.ecranSecond>div:nth-child(1){
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+
+.containerLogoBonjour{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.containerLogoBonjour>p{
+    margin: 0.8em;
+    rotate: -10deg;
+    text-align: center;
+    font-family: SuezOne;
+    font-size: 2.5em;
+    text-shadow:-1px -1px 0 #ffffff,  
+        1px -1px 0 #ffffff,
+       -1px  1px 0 #ffffff,
+        1px  1px 0 #ffffff;
+}
+
+}
+
+
+/*//////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////// RESPONSIVE POUR TELEPHONE ////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+
+@media(max-width: 767px){
+    /*/////////////////////////  corp  ///////////////////////////////// */
+    /*mise en page*/
+    body{
+        max-width: 100%;
+        background-color: #080808;
+        background-image: url(../Objets/Fond\ Ecran\ secondaireFond\ Ecran\ portfolio.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    /* Grille de la page */
+    .page{
+        display: grid;
+        grid-template-rows: 4em auto; /* 4em taille de la priemere ligne */
+    }
+    
+    /*Flex pour centrer le head page*/
+    .page>div{
+        display: flex;
+        align-items: center;
+    }
+    
+    /* container titre */
+    .page>div:nth-child(1){             
+        font-family: SuezOne; 
+        font-size:1.2em;
+        justify-content: center;
+        text-shadow:-1px -1px 0 #ffffff,  
+        1px -1px 0 #ffffff,
+       -1px  1px 0 #ffffff,
+        1px  1px 0 #ffffff;
+    }
+    
+    /*/////////////////////////// ecranMenu //////////////////////////// */  
+    
+    /*Position Ecran Menu + Mise en page */
+    .page>div:nth-child(3){               
+        margin-top: 3rem;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        min-width: 700px;
+        max-width: 100%;
+    }
+        /* Taille Logo */
+        .bouton{
+            width: 60%;
+        }
+    
+        /*police des boutons*/
+        .ecranMenu>div{
+            font-family: SuezOne;
+        }
+    
+        .ecranMenu>div>p{
+            font-size: 1.3em;
+            max-height: 28px;
+            margin-top: -1em;
+            margin-bottom: 3em;
+        }
+    
+        /* position Fond ecran princ */
+        .ecranMenu>div:nth-child(1){ 
+            display: none;
+        }
+    
+        /* boutonprofil */
+        .boutonProfil{ 
+            grid-row: 1;
+            grid-column:1;
+        }
+    
+        /*bouton Diplomes/certificats */
+        .boutonDiplomes{
+            opacity: 30%;
+            grid-row: 1;
+            grid-column: 2;
+        }
+    
+        /* bouton Parcours PRO */
+        .boutonParcoursPro{
+            opacity: 30%;
+            grid-row: 1;
+            grid-column: 3;
+        }
+    
+        /*bouton Competences */
+        .boutonCompetences{
+            opacity: 30%;
+            grid-row: 2;
+            grid-column: 1;
+        }
+    
+        /* bouton Qualités */
+        .boutonQualités{ 
+            opacity: 30%;
+            grid-row: 2;
+            grid-column: 2;
+        }
+    
+        /*bouton Loisirs */
+        .boutonLoisirs{
+            opacity: 30%;
+            grid-row: 2;
+            grid-column: 3;
+        }
+    
+        /* bouton Contact */
+        .boutonContact{ 
+            grid-row: 3 ;
+            grid-column: 1;
+        }
+    
+        /*bouton Projet*/
+        .boutonMesProjets{
+            grid-row: 3;
+            grid-column: 2;
+        }
+    
+        /* bouton CV */
+        .boutonMonCV{ 
+            grid-row: 3;
+            grid-column: 3;
+        }
+    
+        /*bouton Home*/
+        .boutonHome{
+            grid-row: 4;
+            grid-column: 2;
+        }
+    
+    /* desactivation de la balise div ecran second et du marque page */
+    .ecranSecond{
+        display: none !important;
+    }
+    .marquePage{
+        display: none !important;
+    }
+}
