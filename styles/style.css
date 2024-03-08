@@ -256,7 +256,7 @@ body{
     }
     
     /* container titre */
-    .page>div:nth-child(1){             
+    .page>.titre{             
         font-family: SuezOne; 
         font-size:1.3em;
         text-shadow:-1px -1px 0 #ffffff,  
@@ -267,7 +267,7 @@ body{
     }
     
     /*Position Ecran Menu + Mise en page */
-    .page>div:nth-child(3){               
+    .page>.ecranMenu{               
         text-align: center;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
