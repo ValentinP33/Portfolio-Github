@@ -10,6 +10,15 @@
     src: url('../Fonts/FugazOne-Regular.ttf');
 }
 
+@font-face{
+    font-family: Fredoka;
+    src: url('../Fonts/Fredoka.ttf');
+}
+
+@font-face{
+    font-family: Nunito;
+    src: url('../Fonts/Nunito/Nunito-Regular.ttf');
+}
 
 /*//////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////////////////////////////////////////*/
@@ -17,20 +26,20 @@
 /*//////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////////////////////////////////////////*/
 
-@media (min-width:1550px) and (max-width: 1920px){
+@media (min-width:1530px) and (max-width: 1920px){
 /*/////////////////////////  corp  ///////////////////////////////// */
 /*mise en page*/
 body{
     background-color: #080808;
-    margin-left: 3rem;
-    margin-right: 3rem;
-    margin-top: 1rem;
+    margin-left: 3em;
+    margin-right: 3em;
+    margin-top: 1em;
 }
 
 /* Grille de la page */
 .page{
     display: grid;
-    grid-template-columns: repeat(4,25%);
+    grid-template-columns: repeat(4,1fr);
     grid-template-rows: 4em auto; /* 4em taille de la priemere ligne */
 }
 
@@ -38,48 +47,39 @@ body{
 .page>div{
     display: flex;
     align-items: center;
+    justify-content: center;
     border-radius: 0.8em;
+    
 }
 
 /* container titre */
-.page>div:nth-child(1){             
-    grid-column: 1 / span 3;
+.page>.titre{             
+    grid-column: 1 / span 4;
     grid-row: 1 / span 1;
     background: linear-gradient(to left, rgba(177, 201, 209, 1), rgba(42, 113, 145, 1));
-    margin-right: 1rem;
+    margin-right: 1em;
     font-family: SuezOne; 
     font-size:2em;
-    justify-content: center;
-}
-
-/* Container marquePage */     
-.page>div:nth-child(2){                         
-    grid-column: 4 / span 1;
-    grid-row: 1 / span 1;
-    background: linear-gradient(to left, rgba(249, 145, 142, 1), rgb(194, 206, 202));
-    font-family: FugazOne;
-    font-size: 2em;
-    justify-content: center;
 }
 
 /*/////////////////////////// ecranMenu /////////////////////////// */  
 
 /*Position Ecran Menu + Mise en page */
-.page>div:nth-child(3){               
+.page>.ecranMenu{               
     grid-column: 1 / span 2;
     grid-row: 2 / span 1;
-    margin-right: 1rem;
-    margin-top: 1rem;
+    margin-right: 1em;
+    margin-top: 1em;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 25%);
+    grid-template-rows: repeat(4, 1fr);
     min-width: 700px;
     
 }
     /* Taille Logo */
     .bouton{
-        width: 60%;
+        max-width: 10em;
     }
 
     /*police des boutons*/
@@ -90,11 +90,11 @@ body{
     .ecranMenu>div>p{
         font-size: 1.3em;
         max-height: 28px;
+        margin-top: -1em;
     }
 
     /* position Fond ecran princ */
-    .ecranMenu>div:nth-child(1){ 
-        
+    .ecranMenu>.fondEcran{ 
         grid-row: 1 /  5;
         grid-column: 1 / 4;
     }
@@ -167,51 +167,70 @@ body{
     /* Fond ecran princ */
     .fondEcran img{  
         height: 100%;
-        max-width: 100%;
+        width: 100%;
         min-width: 700px;
         border-radius: 2em;
     }
 
 /*////////////////////////////// ecranSecond///////////////////////////// */    
 
-.page>div:nth-child(4){         
+.page>.ecranSecond{         
     grid-column: 3 / span 2;
     grid-row: 2 / span 1;
-    margin-left: 1rem;
-    margin-top: 1rem;
+    margin-left: 1em;
+    margin-top: 1em;
     text-align: center;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 3fr 1fr; 
+    grid-template-rows: 0.2fr 1.5fr 0.6fr;
+    grid-template-columns: auto;
     min-width: 700px;  
 }
 
-
-
-.ecranSecond>div:nth-child(1){
-    grid-column: 1/2;
-    grid-row: 1/3;
+.ecranSecond>.fondEcran{
+    grid-column: 1;
+    grid-row: 1/4;
 }
 
-.containerLogoBonjour{
+.marquePageTelephone{
     grid-column: 1;
     grid-row: 1;
-}
-
-.containerLogoBonjour>p{
-    margin: 0.8em;
-    rotate: -10deg;
-    text-align: center;
     font-family: SuezOne;
-    font-size: 2.5em;
+    font-size: 3vw ;
     text-shadow:-1px -1px 0 #ffffff,  
-        1px -1px 0 #ffffff,
-       -1px  1px 0 #ffffff,
-        1px  1px 0 #ffffff;
+    1px -1px 0 #ffffff,
+   -1px  1px 0 #ffffff,
+    1px  1px 0 #ffffff;
 }
 
+.textProfil{
+    grid-column: 1;
+    grid-row: 2;
+    
 }
 
+.textProfil>p{
+    margin-right: 2em;
+    margin-left: 2em;
+    text-align : justify;
+    font-size: 1.5vw;
+    font-family: Fredoka;
+    border: #ffffff6b;
+    color: #0e0e0e;
+    background: #ffffff42;
+    border-style: solid;
+    border-radius: 1em;
+    padding : 1em;
+}
+
+.boutonHome2{
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.boutonMenu{
+    width: 10vw;
+}
+}
 
 /*//////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////////////////////////////////////////*/
@@ -219,7 +238,7 @@ body{
 /*//////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////////////////////////////////////////*/
 
-@media(max-width: 767px){
+@media(max-width: 1530px){
     /*/////////////////////////  corp  ///////////////////////////////// */
     /*mise en page*/
     body{
@@ -233,41 +252,31 @@ body{
     /* Grille de la page */
     .page{
         display: grid;
-        grid-template-rows: 4em auto; /* 4em taille de la priemere ligne */
-    }
-    
-    /*Flex pour centrer le head page*/
-    .page>div{
-        display: flex;
-        align-items: center;
+        grid-template-rows: auto; /* 4em taille de la priemere ligne */
     }
     
     /* container titre */
     .page>div:nth-child(1){             
         font-family: SuezOne; 
-        font-size:1.2em;
-        justify-content: center;
+        font-size:1.3em;
         text-shadow:-1px -1px 0 #ffffff,  
         1px -1px 0 #ffffff,
        -1px  1px 0 #ffffff,
         1px  1px 0 #ffffff;
+        text-align: center;
     }
-    
-    /*/////////////////////////// ecranMenu //////////////////////////// */  
     
     /*Position Ecran Menu + Mise en page */
     .page>div:nth-child(3){               
-        margin-top: 3rem;
         text-align: center;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(4, 1fr);
         min-width: 700px;
-        max-width: 100%;
     }
         /* Taille Logo */
         .bouton{
-            width: 60%;
+            max-width: 10em;
         }
     
         /*police des boutons*/

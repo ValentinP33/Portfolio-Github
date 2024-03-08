@@ -26,20 +26,20 @@
 /*//////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////////////////////////////////////////*/
 
-@media (min-width:1550px) and (max-width: 1920px){
+@media (min-width:1530px) and (max-width: 1920px){
 /*/////////////////////////  corp  ///////////////////////////////// */
 /*mise en page*/
 body{
     background-color: #080808;
-    margin-left: 3rem;
-    margin-right: 3rem;
-    margin-top: 1rem;
+    margin-left: 3em;
+    margin-right: 3em;
+    margin-top: 1em;
 }
 
 /* Grille de la page */
 .page{
     display: grid;
-    grid-template-columns: repeat(4,25%);
+    grid-template-columns: repeat(4,1fr);
     grid-template-rows: 4em auto; /* 4em taille de la priemere ligne */
 }
 
@@ -47,48 +47,48 @@ body{
 .page>div{
     display: flex;
     align-items: center;
+    justify-content: center;
     border-radius: 0.8em;
+    
 }
 
 /* container titre */
-.page>div:nth-child(1){             
+.page>.titre{             
     grid-column: 1 / span 3;
     grid-row: 1 / span 1;
     background: linear-gradient(to left, rgba(177, 201, 209, 1), rgba(42, 113, 145, 1));
-    margin-right: 1rem;
+    margin-right: 1em;
     font-family: SuezOne; 
     font-size:2em;
-    justify-content: center;
 }
 
 /* Container marquePage */     
-.page>div:nth-child(2){                         
+.page>.marquePage{                         
     grid-column: 4 / span 1;
     grid-row: 1 / span 1;
     background: linear-gradient(to left, rgba(249, 145, 142, 1), rgb(194, 206, 202));
     font-family: FugazOne;
     font-size: 2em;
-    justify-content: center;
 }
 
 /*/////////////////////////// ecranMenu /////////////////////////// */  
 
 /*Position Ecran Menu + Mise en page */
-.page>div:nth-child(3){               
+.page>.ecranMenu{               
     grid-column: 1 / span 2;
     grid-row: 2 / span 1;
-    margin-right: 1rem;
-    margin-top: 1rem;
+    margin-right: 1em;
+    margin-top: 1em;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 25%);
+    grid-template-rows: repeat(4, 1fr);
     min-width: 700px;
     
 }
     /* Taille Logo */
     .bouton{
-        width: 60%;
+        max-width: 10em;
     }
 
     /*police des boutons*/
@@ -99,10 +99,11 @@ body{
     .ecranMenu>div>p{
         font-size: 1.3em;
         max-height: 28px;
+        margin-top: -1em;
     }
 
     /* position Fond ecran princ */
-    .ecranMenu>div:nth-child(1){ 
+    .ecranMenu>.fondEcran{ 
         grid-row: 1 /  5;
         grid-column: 1 / 4;
     }
@@ -182,28 +183,27 @@ body{
 
 /*////////////////////////////// ecranSecond///////////////////////////// */    
 
-.page>div:nth-child(4){         
-    grid-column: 3 / span 2;
+.page>.ecranSecond{         
+    grid-column: 3 /span 2;
     grid-row: 2 / span 1;
-    margin-left: 1rem;
-    margin-top: 1rem;
+    margin-left: 1em;
+    margin-top: 1em;
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 2fr 0.5fr 2fr 2fr; 
+    grid-template-rows: 0.5fr 1.5fr 0.5fr 1fr 1fr; 
     min-width: 700px;  
 }
 
-.ecranSecond>div:nth-child(1){
-    grid-column: 1/4;
+.ecranSecond>.fondEcran{
+    grid-column: 1;
     grid-row: 1/6;
 }
 
 .marquePageTelephone{
-    grid-column: 1/4;
+    grid-column: 1;
     grid-row: 1;
     font-family: SuezOne;
-    font-size: 2em;
+    font-size: 2vw;
     text-shadow:-1px -1px 0 #ffffff,  
         1px -1px 0 #ffffff,
        -1px  1px 0 #ffffff,
@@ -212,25 +212,25 @@ body{
 
 .containerVideoPhotoProjet{
     grid-row: 2;
-    grid-column: 1/4;
+    grid-column: 1;
 }
 
 .containerVideoPhotoProjet>img{
-    max-width: 70%;
+    max-width: 40vw;
 }
 
 .ContaineCompetencesApp{
     grid-row: 3;
-    grid-column: 1/4;
+    grid-column: 1;
 }
 
 .ContaineCompetencesApp>img{
-    max-width: 20%;
+    max-width: 10vw;
 }
 
 
 .textProfil{
-    grid-column: 1/4;
+    grid-column: 1;
     grid-row: 4;
 }
 
@@ -238,7 +238,7 @@ body{
     margin-right: 2em;
     margin-left: 2em;
     text-align : justify;
-    font-size: 2em;
+    font-size: 1.5vw;
     font-family: Fredoka;
     border: #ffffff6b;
     color: #0e0e0e;
@@ -248,28 +248,26 @@ body{
     padding : 1em;
 }
 
-.flecheGauche{
+.menu{
+    grid-row: 5;
     grid-column: 1;
-    grid-row: 5;
-    scale: 120%;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.boutonHome2{
-    grid-column: 2;
-    grid-row: 5;
-}
-
-.boutonHome2>p{
-    font-family: SuezOne;
-    font-size: 1.3em;
-    
+.flecheGauche{
+    scale: 2vw;
+    margin-right: 2em;
 }
 
 .flecheDroite{
-    grid-column: 3;
-    grid-row: 5;
-    scale: 120%;
+    scale: 2vw;
+    margin-left: 2em;
+}
+
+.boutonMenu{
+    width: 10vw;
 }
 }
 
@@ -279,7 +277,7 @@ body{
 /*//////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////////////////////////////////////////*/
 
-@media(max-width: 767px){
+@media(max-width: 1530px){
     /*/////////////////////////  corp  ///////////////////////////////// */
     /*mise en page*/
     body{
@@ -293,18 +291,17 @@ body{
     /*recuperation ecran second pour telephone*/
     .ecranSecond{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 0.8fr 1fr 0.5fr 0.5fr 0.5fr;
+        grid-template-columns: auto;
         text-align: center;
+        align-items: center;
     }
 
     /*titre sur telephone*/
     .marquePageTelephone{
-        grid-column: 1/4;
         grid-row: 1;
-        text-align: center;
         font-family: SuezOne;
-        font-size: 1.5em ;
+        font-size: 5vw;
         text-shadow:-1px -1px 0 #ffffff,  
         1px -1px 0 #ffffff,
        -1px  1px 0 #ffffff,
@@ -313,7 +310,6 @@ body{
 
     .containerVideoPhotoProjet{
         grid-row: 2;
-        grid-column: 1/4;
     }
 
     .containerVideoPhotoProjet>img{
@@ -322,7 +318,6 @@ body{
 
     .ContaineCompetencesApp{
         grid-row: 3;
-        grid-column: 1/4;
     }
 
     .ContaineCompetencesApp>img{
@@ -333,11 +328,10 @@ body{
     /*text page profil*/
     .textProfil{
         grid-row: 4;
-        grid-column: 1/4;
         margin-left: 2em;
         margin-right: 2em;
         font-family: Fredoka;
-        font-size: 1em;
+        font-size: 3vw;
         text-align: justify;
         border: #ffffff6b;
         color: #0e0e0e;
@@ -347,30 +341,35 @@ body{
         padding-left: 1em;
         padding-right: 1em;
     }
+
+    .menu{
+        grid-row: 5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     
     .flecheGauche{
-        margin-top: 3em;
-        grid-column: 1;
-        grid-row: 5;
-        scale: 80%;
+        margin-right: 2em;
+    }
+
+    .flecheDroite{
+        margin-left: 2em;
     }
     
     /*position icone home*/
     .boutonHome2{
-        grid-column: 2;
-        grid-row: 5;
+        grid-row: 3;
     }
 
     /*modification taille icone home*/
     .boutonMenu{
-        scale: 60%;
+        width: 25vw;
+        max-width: 150px;
     }
-    
-    .flecheDroite{
-        margin-top: 3em;
-        grid-column: 3;
-        grid-row: 5;
-        scale: 80%
+
+    .boutonFleche{
+        max-width: 75px;
     }
 
 
