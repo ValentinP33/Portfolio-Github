@@ -247,6 +247,7 @@ body{
     /*mise en page*/
     body{
         max-width: 100%;
+        
         background-color: #080808;
         background-image: url(../Objets/Fond\ Ecran\ secondaireFond\ Ecran\ portfolio.svg);
         background-size: cover;
@@ -266,7 +267,7 @@ body{
     .marquePageTelephone{
         grid-row: 1;
         font-family: SuezOne;
-        font-size: 5vw ;
+        font-size: 6vw ;
         text-shadow:-1px -1px 0 #ffffff,  
         1px -1px 0 #ffffff,
        -1px  1px 0 #ffffff,
@@ -278,8 +279,9 @@ body{
         grid-row: 2;
         margin-left: 2em;
         margin-right: 2em;
+        margin-top: 2em;
         font-family: Fredoka;
-        font-size: 3vw;
+        font-size: 4vw;
         text-align: justify;
         border: #ffffff6b;
         color: #0e0e0e;
