@@ -277,6 +277,10 @@ body{
 .boutonMenu{
     width: 10vw;
 }
+
+.ecranTropGrand{
+    display: none !important;
+}
 }
 
 /*//////////////////////////////////////////////////////////////////////////////*/
@@ -399,4 +403,46 @@ body{
     .ecranMenu{
         display: none !important;
     }
+    .ecranTropGrand{
+        display: none !important;
+    }
+}
+
+/*//////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////// RESPONSIVE POUR TELEPHONE ////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+@media(min-width: 1921px){
+    .page{
+        display: none !important;
+    }
+
+    body{
+        background-color: #080808;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .ecranTropGrand{
+        display: grid;
+        grid-template-rows: auto;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .ecranTropGrand>img{
+        margin-left: 15em;
+        width: 60%;
+    }
+
+    .ecranTropGrand>p{
+        font-family: SuezOne;
+        font-size: 3vw ;
+        text-shadow:-1px -1px 0 #ffffff,  
+        1px -1px 0 #ffffff,
+        -1px  1px 0 #ffffff,
+        1px  1px 0 #ffffff;
+    }
+
 }
